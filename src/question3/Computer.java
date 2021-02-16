@@ -1,6 +1,6 @@
 package question3;
 
-public class Computer {
+public class Computer extends Device implements Ethernet{
     private int ramSlot;
     private String videoCardname;
 
@@ -12,12 +12,13 @@ public class Computer {
         this.ramSlot = ramSlot;
     }
 
-    public String getVideoCardname() {
-        return videoCardname;
-    }
+    public String getVideoCardname() { return videoCardname; }
 
     public void setVideoCardname(String videoCardname) {
         this.videoCardname = videoCardname;
     }
 
+    public boolean cableConnected(){
+        return true;
+    }
 }
